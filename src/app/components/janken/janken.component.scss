@@ -1,0 +1,46 @@
+@import "abstracts/variables";
+
+.janken-container {
+  border-radius: 50%;
+  background-color: white;
+
+  border: 1em solid blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &.rock {
+    border-color: map-get($map: $rock-colors, $key: "secondary");
+    background-image: url("~src/assets/images/icon-rock.svg");
+    box-shadow: inset 0 0.5em 0 rgba(0, 0, 0, 0.15),
+      0 0.5em
+        rgba($color: map-get($map: $rock-colors, $key: "primary"), $alpha: 0.75);
+  }
+
+  &.paper {
+    border-color: map-get($map: $paper-colors, $key: "secondary");
+    background-image: url("~src/assets/images/icon-paper.svg");
+    box-shadow: inset 0 0.5em 0 rgba(0, 0, 0, 0.15),
+      0 0.5em
+        rgba(
+          $color: map-get($map: $paper-colors, $key: "primary"),
+          $alpha: 0.75
+        );
+  }
+
+  &.scissors {
+    border-color: map-get($map: $scissors-colors, $key: "secondary");
+    background-image: url("~src/assets/images/icon-scissors.svg");
+    box-shadow: inset 0 0.5em 0 rgba(0, 0, 0, 0.15),
+      0 0.5em
+        rgba(
+          $color: map-get($map: $scissors-colors, $key: "primary"),
+          $alpha: 0.75
+        );
+  }
+}

@@ -1,0 +1,21 @@
+<div class="action-container">
+  <img class="triangle" src="assets/images/bg-triangle.svg" />
+  <button aria-label="paper" type="button" (click)="play(jankenType.PAPER)">
+    <app-janken [type]="jankenType.PAPER" class="janken paper"></app-janken>
+  </button>
+
+  <button
+    aria-label="scissors"
+    type="button"
+    (click)="play(jankenType.SCISSORS)"
+  >
+    <app-janken
+      [type]="jankenType.SCISSORS"
+      class="janken scissors"
+    ></app-janken>
+  </button>
+
+  <button aria-label="rock" type="button" (click)="play(jankenType.ROCK)">
+    <app-janken [type]="jankenType.ROCK" class="janken rock"></app-janken>
+  </button>
+</div>

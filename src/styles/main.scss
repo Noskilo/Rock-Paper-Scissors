@@ -1,0 +1,30 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+:root {
+  font-size: 16px;
+  @include respond-to("mobile") {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-image: radial-gradient(map-get($background-colors, "primary"), map-get($background-colors, "secondary"));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.25);
+}

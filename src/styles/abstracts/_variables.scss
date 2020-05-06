@@ -1,1 +1,41 @@
-$scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+$scissors-colors: (
+  "primary": hsl(39, 89%, 49%),
+  "secondary": hsl(40, 84%, 53%),
+);
+
+$paper-colors: (
+  "primary": hsl(230, 89%, 62%),
+  "secondary": hsl(230, 89%, 65%),
+);
+
+$rock-colors: (
+  "primary": hsl(349, 71%, 52%),
+  "secondary": hsl(349, 70%, 56%),
+);
+$lizard-colors: (
+  "primary": hsl(261, 73%, 60%),
+  "secondary": hsl(261, 72%, 63%),
+);
+
+$cyan-colors: (
+  "primary": hsl(189, 59%, 53%),
+  "secondary": hsl(189, 58%, 57%),
+);
+
+$dark-text-color: hsl(229, 25%, 31%);
+$score-text-color: hsl(229, 64%, 46%);
+$header-outline-color: hsl(217, 16%, 45%);
+
+$background-colors: (
+  "primary": hsl(214, 47%, 23%),
+  "secondary": hsl(237, 49%, 15%),
+);
+
+$breakpoints: (
+  "mobile": (
+    max-width: 375px,
+  ),
+  "desktop": (
+    max-width: 1366px,
+  ),
+);

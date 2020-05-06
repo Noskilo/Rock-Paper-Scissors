@@ -1,0 +1,7 @@
+<div
+  [ngStyle]="{ width: size + 'rem', height: size + 'rem' }"
+  class="janken-container"
+  [class.rock]="jankenType.ROCK === type"
+  [class.scissors]="jankenType.SCISSORS === type"
+  [class.paper]="jankenType.PAPER === type"
+></div>

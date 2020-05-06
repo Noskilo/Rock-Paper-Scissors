@@ -1,0 +1,40 @@
+<div class="result-container">
+  <div class="pick">
+    <h1>You Picked</h1>
+
+    <div style="position: relative;">
+      <app-janken size="8" [type]="round.playerPick"> </app-janken>
+
+      <ng-container *ngIf="round.outcome === roundOutcome.WIN">
+        <div class="win-halo">
+          <div></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="result">
+    <h1>
+      {{
+        round.outcome === roundOutcome.WIN
+          ? "YOU WON"
+          : round.outcome === roundOutcome.LOSS
+          ? "YOU LOST"
+          : "YOU TIED"
+      }}
+    </h1>
+
+    <button type="button" (click)="playAgain()">Play Again</button>
+  </div>
+  <div class="pick">
+    <h1>The House Picked</h1>
+
+    <div style="position: relative;">
+      <app-janken size="8" [type]="round.housePick"></app-janken>
+      <ng-container *ngIf="round.outcome === roundOutcome.LOSS">
+        <div class="win-halo">
+          <div></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
