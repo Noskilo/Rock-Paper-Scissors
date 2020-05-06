@@ -14,7 +14,7 @@ export class RulesComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  protected close() {
+  close() {
     this.dialogRef.close();
   }
 }
