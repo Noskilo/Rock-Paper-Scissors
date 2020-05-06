@@ -1,14 +1,21 @@
 <div class="container">
   <div class="game">
     <div class="scoreboard">
-      <img src="assets/images/logo.svg" />
+      <img src="assets/images/logo.svg" alt="" />
       <div class="score">
         <h2>Score</h2>
         {{ score }}
       </div>
     </div>
 
-    <div style="height: 20rem; display: flex; justify-content: center; align-items: center;">
+    <div
+      style="
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
       <ng-container *ngIf="round; else pick">
         <app-result [round]="round"></app-result>
       </ng-container>
@@ -17,7 +24,6 @@
         <app-action-triangle></app-action-triangle>
       </ng-template>
     </div>
-
 
     <button class="rules-btn" (click)="open()">Rules</button>
   </div>
